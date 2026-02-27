@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="./assets/images/Icon.svg" type="image/x-icon">
+   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    
+
+<!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <img src="./images/Frame 1.png" alt="">
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="report-details.html">Report details</a></li>
+        <li><a href="myview.html">My View</a></li>
+      <li><a href="users.html">Users & Roles</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="topbar d-flex align-items-center justify-content-between p-3 mb-4 bg-white rounded-3 shadow-sm">
+      <h2>Report Details</h2>
+    </div>
+
+    <!-- Report Header -->
+      <div
+        class="d-flex justify-content-between align-items-center border rounded-3 p-3 mb-4 bg-white"
+        style="border-color: #d0d7de !important"
+      >
+        <div class="dropdown">
+          <button
+            class="btn btn-warning rounded-pill dropdown-toggle fw-semibold"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            In Progress
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">In Progress</a></li>
+            <li><a class="dropdown-item" href="#">Solved</a></li>
+            <li><a class="dropdown-item" href="#">Cancelled</a></li>
+            <li><a class="dropdown-item" href="#">Pending</a></li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <!-- Photo -->
+      <div class="mb-4 bg-white rounded-3 overflow-hidden">
+        <img
+          src="https://via.placeholder.com/1180x104"
+          alt="Report Photo"
+          class="img-fluid w-100"
+          style="height: 104px; object-fit: cover;"
+        />
+      </div>
+
+      <!-- Report Content -->
+      <div class="row g-4">
+    
+        <!-- Details & Map -->
+       <form>
+  <div class="container my-4">
+  <div class="row g-4">
+    <div class="col-md-6 bg-white rounded-3 p-3 shadow-sm">
+      <label class="form-label fw-semibold mb-2">Location on map</label>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0198461272894!2d-122.47111418468138!3d37.77397227975814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085817c6a36e2ef%3A0x8063c7e484dbd2a1!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2seg!4v1679066144069!5m2!1sen!2seg"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <div class="col-md-6 bg-white rounded-3 p-3 shadow-sm d-flex flex-column">
+      <label for="describeProblem" class="form-label fw-semibold">Describe Problem</label>
+      <textarea
+        id="describeProblem"
+        class="form-control mb-3"
+        rows="5"
+        required
+      >Lorem ipsum dolor sit amet consectetur. Odio risus in tortor fermentum habitasse. Sed fermentum aenean erat ipsum facilisis ultricies porttitor. Egestas pharetra morbi tristique consectetur blandit eu dolor. Tellus suscipit rhoncus scelerisque in gravida gravida massa.</textarea>
+
+      <label for="date" class="form-label fw-semibold">Date</label>
+      <input
+        type="date"
+        id="date"
+        class="form-control mb-3"
+        value="2025-02-10"
+        required
+      />
+
+      <label for="location" class="form-label fw-semibold">Location</label>
+      <input
+        type="text"
+        id="location"
+        class="form-control mb-3"
+        value="Port Said, Port Fouad City, Port Said Governorate"
+        required
+      />
+
+      <label class="form-label fw-semibold">Type</label>
+      <div class="mb-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="typeRoads" value="Roads" checked />
+          <label class="form-check-label" for="typeRoads">Roads</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="typeLights" value="Lights" checked />
+          <label class="form-check-label" for="typeLights">Lights</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="typeClean" value="Clean" checked />
+          <label class="form-check-label" for="typeClean">Clean</label>
+        </div>
+      </div>
+
+      <label class="form-label fw-semibold">Priority</label>
+      <div class="mb-3">
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="priority"
+            id="priorityHigh"
+            value="High"
+            checked
+          />
+          <label class="form-check-label badge rounded-pill bg-success text-white px-3 py-2" for="priorityHigh">High</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="priority"
+            id="priorityMedium"
+            value="Medium"
+          />
+          <label class="form-check-label badge rounded-pill bg-warning text-dark px-3 py-2" for="priorityMedium">Medium</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="priority"
+            id="priorityLow"
+            value="Low"
+          />
+          <label class="form-check-label badge rounded-pill bg-secondary text-white px-3 py-2" for="priorityLow">Low</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+      <!-- Buttons -->
+      <div class="mt-4 d-flex gap-3">
+        <button class="btn btn-primary px-4">Close Report</button>
+        <button class="btn btn-dark px-4">Cancel</button>
+      </div>
+    </main>
+  </div>
+
+  </div>
+
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+
+  const links = document.querySelectorAll(".sidebar ul li a");
+
+  links.forEach(link => {
+    // لو رابط اللينك موجود جوه رابط الصفحة الحالي
+    if (window.location.href.includes(link.getAttribute("href"))) {
+      link.parentElement.classList.add("active");
+    }
+  });
+
+});</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="./assets/images/Icon.svg" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    
+
+<!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <img src="./images/Frame 1.png" alt="">
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="report-details.html">Report Details</a></li>
+      <li><a href="myview.html">My View</a></li>
+      <li><a href="users.html">Users & Roles</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="topbar d-flex align-items-center justify-content-between p-3 mb-4 bg-white rounded-3 shadow-sm">
+      <h2>Dashboard</h2>
+
+      
+    </div>
+
+    <h3 class="section-title">Reports Numbers</h3>
+
+    <div class="cards">
+      <div class="card new">
+        <h4>New Reports</h4>
+        <h2 id="newCount">40000</h2>
+      </div>
+
+      <div class="card solved">
+        <h4>Solved</h4>
+        <h2 id="solvedCount">40000</h2>
+      </div>
+
+      <div class="card cancelled">
+        <h4>Cancelled</h4>
+        <h2 id="cancelledCount">55000</h2>
+      </div>
+
+      <div class="card latest">
+        <h4>Latest Reports</h4>
+        <h2 id="latestCount">1432</h2>
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+
+  const links = document.querySelectorAll(".sidebar ul li a");
+
+  links.forEach(link => {
+    // لو رابط اللينك موجود جوه رابط الصفحة الحالي
+    if (window.location.href.includes(link.getAttribute("href"))) {
+      link.parentElement.classList.add("active");
+    }
+  });
+
+});</script>
+</body>
+</html>
